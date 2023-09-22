@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <!--2. Media y suma hasta meter número negativo-->
+    <h1>MEDIA Y SUMA</h1>
+    <button onclick="mediaSuma()">Calcular media y suma</button>
+
+    <script>
+        function mediaSuma(){
+            var num1 , suma = 0, media = 0, cont = 0;
+            num1 = prompt("Ingresa un número, cuando quieras parar ingresa uno negativo");
+            while (num1 >= 0 || isNaN(num1)){
+                if(isNaN(num1)){
+                    alert("No has introducido un numero");
+                    break;
+                }
+                //Actualizamos valores de suma y media
+                cont += 1;
+                suma += parseFloat(num1);    
+                media = suma / cont;
+
+                //Mandamos mensajes con datos actualizados y pedimos otro numero
+                alert("La media es " + media + " y la suma es " + suma);
+                num1 = prompt("Ingresa otro número");
+            }
+            alert("FIN DEL PROGRAMA");
+        }
+    </script>
+</body>
+</html>

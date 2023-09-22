@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio3</title>
+</head>
+
+<body>
+    <!--3. Muestra los números entre dos introducidos 
+    por el usuario-->
+    <h1>Mostrar numeros entre 2 introducidos</h1>
+    <button onclick="mostrarNum()">Mostrar</button>
+
+    <script>
+        function mostrarNum() {
+            var num1,
+                num2,
+                grande = 0,
+                pequeno = 0,
+                secuencia = "";
+            
+            //PEDIMOS LOS NUMEROS
+            entrada1 = prompt("Introduce el primer numero");
+            entrada2 = prompt("Introduce el segundo numero");
+
+            num1 = parseFloat(entrada1);
+            num2 = parseFloat(entrada2);
+
+            //COMPROBAMOS QUE LOS NUEROS SEAN VALIDOS
+            if (num1 >= num2 && !isNaN(num1) && !isNaN(num2)) {
+                grande = num1;
+                pequeno = num2;
+            } else if (num2 > num1 && !isNaN(num1) && !isNaN(num2)) {
+                grande = num2;
+                pequeno = num1;
+            } else {
+                alert("No has introducido numeros válidos");
+            }
+
+            //SACAMOS LOS NUMEROS
+            for (i = pequeno +1 ; i < grande; i++) {
+                secuencia += i.toString() + ", ";    
+            }
+            alert(secuencia);
+        }
+    </script>
+</body>
+
+</html>

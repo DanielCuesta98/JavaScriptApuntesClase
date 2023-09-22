@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--PRIMER EJEMPLO CON VAR Y LET-->
+    <script>
+        {//Creamos el bloque
+        var primeraVariable = "Visible fuera del bloque"; //Existe fuera de este bloque
+        let segundaVariable = "No visible fuera del bloque";//No existe fuera del bloque
+        }
+        console.log(primeraVariable);
+        console.log(segundaVariable);
+    </script>
+
+    <!--SEGUNDO EJEMPLO JUGANDO CON VARIABLE LET-->
+    <script>
+        var primeraVariable = "Declarada fuera del bloque";
+        function miFuncion (){
+            var primeraVariable = "Declarada dentro de la funcion con el mismo nombre";
+            console.log(primeraVariable);
+            return 0; //se llama igual pero solo existe dentro de la funcion
+        }
+        console.log(primeraVariable);
+    </script>
+    <!--TERCER EJEMPLO-->
+    <script>
+        let altura = 180;
+        {
+            let peso = 70;
+            console.log(altura);
+            console.log(peso);
+        }
+    </script>
+
+    <!--CUARTO EJEMPLO-->
+    <script>
+        let precio = 100;
+        console.log(precio); // ->100
+        {
+            let precio = 200; //Cabia de valor solo dentro del bloque
+            console.log(precio);
+        }
+        console.log(precio);//Vuelve a adquirir valor 100
+    </script>
+</head>
+<body>
+    <script>
+        miFuncion();
+    </script>
+</body>
+</html>
