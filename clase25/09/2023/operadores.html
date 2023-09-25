@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parrafo1"></p>
+    <p id="parrafo2"></p>
+    <p id="parrafo3"></p>
+    <script>
+        //OPERADORES DE TIPO
+        var nombre;
+        document.getElementById("parrafo1").innerHTML = nombre;
+        nombre = "Belen";
+        document.getElementById("parrafo2").innerHTML = nombre;
+
+        var nacimiento = 1988;
+        var nombreApellido = "Javier " + "Garcia";
+        var fallecimiento = nacimiento + 37;
+
+        //PROBANDO TYPEOF
+        document.getElementById("parrafo3").innerHTML = nombreApellido + " nacio en " + nacimiento + " y murio en " + fallecimiento;
+        alert(typeof(nacimiento));//Number
+        alert(typeof(primerApellido));//String
+
+        let lista = [1,2,3,4];
+        alert(typeof(lista));//object
+
+        var a = null;
+        alert(typeof(a));//object
+
+        //PROBADO INSTANCEOF
+        let animal = ["perro", "gato", "leon"];
+        alert (animal instanceof(Array));//Probamos Instance of, devuelve true o false
+
+    </script>
+</body>
+</html>
