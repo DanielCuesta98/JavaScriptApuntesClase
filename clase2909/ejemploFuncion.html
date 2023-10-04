@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //FUNCION QUE REALIZA LA TABLA DE MULTIPLICAR
+        function tablaMultiplicar(tabla, fin = 10) {
+            for (i = 1; i <= fin; i++) {
+                console.log(tabla, " x ", i, " = ", tabla * i);
+            }
+        }
+        tablaMultiplicar(2);
+        //tablaMultiplicar(6, 20);//Ahora el fin es hasta el 20
+
+        //FUNCION QUE SUMA TODOS LOS NUMEROS QUE SE PASEN POR PARAMETRO, SIN IMPORTAR CUANTOS
+        function sumarNumeros() {
+            let suma = 0;
+
+            // Recorre todos los argumentos pasados a la función
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] === 'number') {
+                    suma += arguments[i];
+                }
+            }
+            console.log (suma);
+        }
+        sumarNumeros(5,3,4,5,6);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //DECLARAR FUNCIONES SIN USAR FUNCTION
+        /*var diHola = (name) => `Hola${name}!`;
+        console.log(diHola("Dani"));
+
+        let res = (b, e) => {
+            let res = 1
+            if(e > 0 || e < 0){
+                if (e>0){
+                    for (i = 1; i < e; i++){
+                        res *= b;
+                    } 
+                }
+                else{
+                    res = -1
+                    for (i = -1; i > e; i--){
+                        res /= b;
+                    } 
+                }
+            }
+            else {
+                alert(b + " ^ " + e +" = " + 1 );
+            }
+            alert(b + " ^ " + e +" = " + res );
+        }
+
+        let votante = (x1 > 18)?"Puede votar":"No puede votar";
+        let res = (b, e) => {
+            let res = 1
+            res = (e >= 0)?alert(b+"^"+e): alert(b+"/"+e);   
+        }
+
+        let base = prompt("Dime la base");
+        let exponente = prompt("Dime el exponente");
+        res(base, exponente);*/
+    let potencia = (base, exponente) =>{
+        exponente === 0
+        ? 1
+        : exponente > 0
+        ? base * potencia(base, exponente -1 )
+        : 1 / (base * potencia(base, -exponente - 1));
+    }
+        
+        let bas = prompt("Dime la base");
+        let exp = prompt("Dime el exponente");
+
+        alert(potencia(bas,exp));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

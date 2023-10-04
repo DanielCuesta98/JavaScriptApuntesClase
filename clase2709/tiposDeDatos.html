@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let x = 1;
+        let y = "3";
+
+        //FUNCIONES PARA CONVERSION DE TIPO
+        y = parseInt(y);//Usa como numero Int
+        console.log("TIPOS DE NUMEROS:")
+        console.log(typeof(y));
+
+        y = parseFloat(y);//Usa como numero float
+        console.log(typeof(y));
+
+        //Convirtiendo fecha a String
+        let fecha = new Date();//Object
+        let cadena = fecha.toDateString();//String
+        console.log(typeof(fecha));
+        console.log(typeof(cadena));
+
+        //Conversiones implicitas
+        console.log("CONVERSIONES IMPLICITAS:")
+        console.log ("0" == true);
+        console.log (0.1e1 == true);
+
+        const STR1 = 42 + "1";//Sumando se convierte en String
+        console.log("42 + 1: " + STR1); //-> 421
+        console.log(typeof(STR1));
+
+        const STR2 = 42 - "1";//Restando se convierte en Number
+        console.log("42 - 1: " + STR2);
+        console.log(typeof(STR2));
+
+        //COERCION
+        const valor1 = "5";
+        const valor2 = 9;
+        const resultado = valor1 + valor2;
+        console.log("COERCIÓN");
+        console.log(resultado);
+        console.log(typeof(resultado))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

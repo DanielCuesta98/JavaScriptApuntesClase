@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase2909</title>
+</head>
+<body>
+    <div id="fecha"></div>
+    <p id="fecha2"></p>
+    <script>
+        console.log((2 == "2")? "Son iguales":"No son iguales");//OPERADOR TERNARIO
+
+        let edad = 25;
+        console.log(`El visitante tiene: ${edad} años: `); //COMILLA FRANCESA Y SU USO
+
+        console.log((!isNaN(edad))? "Es un numero" : "No es un numero");//METODO ISNAN
+
+        edad = edad.toString;//Lo convertimos a String 
+        console.log((!isNaN(edad))? "Es un numero" : "No es un numero");
+
+        //METODO TOFIXED
+        var numero = 9.99;
+        console.log(numero.toFixed(0));//10 (Redondea)
+        console.log(numero.toFixed(1));//10.0 (Redondea)
+        console.log(numero.toFixed(2));//9.99
+        console.log(numero.toFixed(3));//9.990
+
+        //METODO TOPRECISION
+        console.log(numero.toPrecision(1));//1e+1
+        console.log(numero.toPrecision(2));//10
+        console.log(numero.toPrecision(3));//9.99
+
+        //METODO PROMPT
+        //console.log(prompt("Introduce un valor"));
+        //console.log(prompt("Introduce tu edad", 18));//El segundo valor es por defecto
+
+        //FECHAS
+        var v = new Date("11/23/2023");//Formato corto
+        console.log(Date("Ago 17 2022")); //Formato largo
+        document.getElementById("fecha").innerHTML = Date();
+
+        var miFecha = new Date();
+        //Mostrando horas : minutos : segundos  
+        document.getElementById("fecha2").innerHTML = miFecha.getHours() + " : " 
+                                                    + miFecha.getMinutes() + " : " 
+                                                    + miFecha.getSeconds();
+
+        //FUNCIONES
+        const cuadrado = function(value){//Ejemplo de funciones que pasan otra funcion como parametro
+            return value * value;
+        }
+        function aplica_fn (dato, funcionAaplicar){
+            return funcionAaplicar(dato);
+        }
+        aplica_fn(3,cuadrado); //Devolvera 9(3 * 3)
+
+        
+    </script>
+</body>
+</html>

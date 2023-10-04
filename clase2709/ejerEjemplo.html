@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        1 == '1'; //TRUE
+        1 == "one"; //FALSE
+        true == 1;  //TRUE
+        false == "zero"; //FALSE
+        "test" == {X:"test"} //FALSE
+
+        1 + 1 //2
+        1 + "1" // 11
+        "hello" + " world" //Hello world
+        "It's " + true //Its true
+        console.log("pizza" + {cheese : "extra"}); //pizza{object(object)}
+
+        //Probando objetos
+        var pizza = {cheese : "extra",
+                    bacon :"normal"};
+        console.log(pizza);
+        pizza.bacon = "extra";
+        console.log (pizza);
+
+        3 - 2 // 1
+        "3" - 2 //1 
+        3 - true // 2
+        1 - {x:3} //NaN
+        console.log("fun" - 2) //NaN
+
+        if({} == {}){
+            console.log("pizza");
+        }
+        else{
+            console.log ("Hamburguesa");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

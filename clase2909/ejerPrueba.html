@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombre = prompt("Introduce tu nombre");//Nombre por teclado
+        console.log("Hola " + nombre); //Saludo
+        console.log(`Hola ${nombre}`); //Saludo con template literals
+        console.log(typeof(nombre)); //Tipo de variable
+        console.log(nombre.length); //Longitud del nombre
+        let esAlumno = confirm("Eres alumno de esta clase??"); //Confirm
+        alert((esAlumno)? `Hola ${nombre} se que eres alumno de esta clase`
+                        : `Hola ${nombre} no eres alumno de esta clase`);// Saludo en funcion del confirm
+
+    </script>
+</body>
+</html>
