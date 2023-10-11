@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = [1, 21, 3]; //No entiende que son numeros y no sabe ordenarlo
+        array1.sort();
+
+        let arrayOrdenado = array1.sort(//Mediante esta funcion podemos ordenar 
+            (num1, num2) => num1 - num2
+        )
+
+        //Intercambiar el valor de dos variables
+        let a = 7;
+        let b = 6;
+
+        let aux = a;// Usamos una variable auxiliar que nos permite no perder valores
+        a = b;
+        b = aux;
+        console.log("Gracias a la variable auxiliar cambiamos intercambiamos los valores: "+a + " : " + b)
+
+        /*
+        //DESESTRUCTURACION
+        */
+
+        //const matriz = [5,6]
+        //const [first, last] = matriz; //First = 5 Last = 6 // Podemos asignar variables con los valores de la matriz
+
+        const matriz = [5,4,3,2]
+        const [first, third] = matriz; //first2 = 5, second2 = 4, rest = discard-descartadas
+        console.log(third);
+
+        //Sabiendo esto hacer el intercambio de variables 
+        [a,b] = [b,a];
+        console.log("Gracias a la desestructuracion podemos volver a intercambiar los valores: "+a + " : " + b)
+
+
+        /*
+         //SPREAD(expandir) Y REST (agrupar)
+        */
+
+        //const debug = (param) => console.log(param); //En este caso al no estar los puntos nos devuelve una matriz
+        const debug = (param) => console.log(...param);//Con los puntos suspensivos conseguimos desestructurar y nos devuelva elementos individuales
+        const a2 = [1,2,3,4,5];
+        debug(a2);//al implementar la funcion debug ha sido desestructurado por ella expandiendolos en elementos individuales
+        //Lo que realiza es lo siguiente: console.log(1, 2, 3, 4, 5)
+
+        //probando REST
+        const elements = [5,4,3,2];
+        const [prim,...rest] = elements
+        console.log("First: " + prim + " ...Rest: " + rest); //prim = 5    Rest = 4,3,2
+    </script>
+</body>
+</html>

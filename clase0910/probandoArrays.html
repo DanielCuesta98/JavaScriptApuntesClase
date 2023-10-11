@@ -16,6 +16,8 @@
             { nombre: "Pepe", edad: 18 },
             { nombre: "Dani", edad: 22 },
         ];
+
+        let personas2 = personas.slice();
         
         // Ordenar el array 'personas' por la propiedad 'edad' usando una función flecha
         let personasOrdenado = personas.sort(
@@ -25,6 +27,10 @@
         let personasOrdenadoNombre = personas.sort(
             //METODO LOCALECOMPARE PARA COMPARAR STRINGS Y ORDENAR POR NOMBRE
             (persona1,persona2) => persona1.nombre.localeCompare(persona2.nombre));//Se ordena de forma ascendente por nombre
+
+            let personasOrdenadoEdad = personas.sort(
+            //METODO LOCALECOMPARE PARA COMPARAR STRINGS Y ORDENAR POR EDAD
+            (persona1,persona2) => persona1 - persona2);//Se ordena de forma ascendente por edad
 
         //console.log(personasOrdenadoNombre);
 

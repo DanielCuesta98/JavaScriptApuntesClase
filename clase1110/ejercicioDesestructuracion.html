@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Tenemos un array de 2 elementos [3,4] y queremos aprovecharlo para crear un nuevo array del 1 al 5
+        */
+       const pareja = [3,4];
+       const array = [1,2,...pareja,5] //[1,2,3,4,5]
+       //const array = [1,2,pareja,5] SI NO USARAMOS SPREAD (...) EN LA POSICION DE PAREJA INSERTARIA UN NUEVO ARRAY [1,2[3,4],5]
+       console.log(array)
+    </script>
+</body>
+</html>
