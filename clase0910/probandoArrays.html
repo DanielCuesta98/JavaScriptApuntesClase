@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let personas = [
+            { nombre: "Juan", edad: 30 },
+            { nombre: "María", edad: 25 },
+            { nombre: "Carlos", edad: 40 },
+            { nombre: "Pepe", edad: 18 },
+            { nombre: "Dani", edad: 22 },
+        ];
+        
+        // Ordenar el array 'personas' por la propiedad 'edad' usando una función flecha
+        let personasOrdenado = personas.sort(
+            //FUNCION QUE COMPARA EDAD Y ORDENA DE FORMA ASCENDENTE
+            (persona1,persona2) => persona1.edad - persona2.edad);//Se ordena de forma ascendente
+
+        let personasOrdenadoNombre = personas.sort(
+            //METODO LOCALECOMPARE PARA COMPARAR STRINGS Y ORDENAR POR NOMBRE
+            (persona1,persona2) => persona1.nombre.localeCompare(persona2.nombre));//Se ordena de forma ascendente por nombre
+
+        //console.log(personasOrdenadoNombre);
+
+        let matriz  = [4,8,3,10,5,1,2,5,1];
+        
+        function orden (array){
+            return array.sort((a,b) => a - b);
+        }
+
+        let matrizOrdenada = orden(matriz);
+        console.log(matrizOrdenada);
+    </script>
+</body>
+
+</html>

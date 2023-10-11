@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //switch
+       /* let edad = parseInt(prompt("Introduce la edad"))
+        switch (true){
+            case edad <18:
+                alert("Eres menor de edad");
+                break;
+            case age >= 18:
+                console.log("Eres mayor de edad")
+                break
+            default:
+                console.log("La edad ingresada no es valida")
+        }*/
+        //foreach
+        //forof
+        //while
+        alert("Vamos a jugar a adivinar el numero del 1 al 100:")
+        let numAdivinar = Math.ceil(Math.random()*100);
+        let numUsuario = parseFloat(prompt("Introduce un numero"))
+        let cont = 1
+        while (numAdivinar !== numUsuario){
+            if (numUsuario < numAdivinar){
+                alert("El numero es mayor, prueba otra vez")
+                numUsuario = parseFloat(prompt("Introduce un numero"))
+                cont ++
+            }
+            else{
+                alert("El numero es menor, prueba otra vez")
+                numUsuario = parseFloat(prompt("Introduce un numero"))
+                cont ++
+            }
+        }
+
+        alert(`LO HAS ADIVINADO EN ${cont} INTENTOS!!!`)
+    </script>
+</body>
+</html>

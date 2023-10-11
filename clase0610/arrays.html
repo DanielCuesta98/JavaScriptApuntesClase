@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <p id="parrafo2"></p>
+    <script>
+        let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(a);
+        document.getElementById("parrafo").innerHTML = a;
+        document.getElementById("parrafo2").innerHTML = a.join(" - ");
+
+        for (let i = 0; i < a.length; i++){
+            console.log(a[i]);
+        }
+        
+        console.log(Array.isArray(a))//Metodo que comprueba si es un array
+
+        a = a.join(" - ");//Convierte el array en una cadena de texto con un separador
+
+        console.log(Array.isArray(a)); //Ahora da false
+        console.log(a); 
+
+        a = a.split(" - ");//Convierte una cadena de texto en un array
+        console.log(Array.isArray(a)); //Ahora da true
+        console.log(a);
+         /**
+          * METODOS:
+          * pop y shift
+          * delete
+          * push y unshift
+          * length
+          * toString
+          * join
+          * concat
+          * flat
+          * splice 
+          * slice
+            */
+</script>
+</body>
+</html>
