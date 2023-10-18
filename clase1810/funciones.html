@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+
+<body>
+    <script>
+        /*Las FUNCIONES deben devolver un único resultado, solo devuelve algo si tiene la palabra return.*/
+        function multiplicar(a, b) {
+            return a * b;
+        }
+
+        let resultado = multiplicar(2, 3);
+        console.log(resultado);
+
+        //Declarando una funcion por EXPRESION, en este caso vemos que no hace falta utilizar "hola" para su invocacion
+        let resultado2 = function hola() {
+            console.log("Bienvenido");
+        }
+        resultado2()
+
+        //Funciones ANONIMAS, no tienen por que tener nombre, la diferencia con la declarativa es que la variable debe estar
+        //anteriormente inicializada a su invocacion.
+        let producto = function (a, b) {
+            return a + b
+        }
+        let resultado3 = producto(4, 12);
+        console.log(resultado3);
+
+        //Funcion CALLBACK, en este ejemplo hacemos un callback pasando una funcion como parametro
+        const funcion2 = function () {
+            console.log("La funcion 2 has sido ejecutada");
+        }
+        const funcion1 = function (callback) {
+            callback();
+        }
+        funcion1(funcion2);
+
+        //Funciones AUTOINVOCADAS, es autoinvocada porque va entre ()
+        (function (user) {
+            console.log("Hola " + user);
+        })("pepe");
+
+        (function () { alert("Hola") });
+
+        //Funcion FLECHA
+
+        //Funcion RECURSIVA, el ejemplo más típico, el factorial
+        function factorial(n){
+            if (n <= 1)
+                return 1
+            else
+                return n * factorial(n - 1)
+        }
+        console.log(factorial(5))
+
+        /*
+        Recorrido con FOREACH
+        Realiza un recorrido (Arrays, Conjuntos y Mapas) mediante una función que recibe dos parámetros,
+        el primero de los cuales almacena el elemento y el segundo (opcional) el índice.
+        Los elementos undefined son tratados como el for…in ( no los considera) 
+        */
+        let miArray = [12, 13, 112, 143, 97]
+        miArray.forEach(function(contenido, posicion) {
+            console.log(`Posición ${posicion}: ${contenido}`)
+        }) 
+
+    </script>
+</body>
+
+</html>

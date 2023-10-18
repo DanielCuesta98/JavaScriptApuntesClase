@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Un SET es un objeto semejante a un array que no permite valores duplicados
+        */
+       const miSet = new Set ("Pamplina") 
+       console.log(miSet)//Devuelve los valores pero sin repetir
+
+       let conjunto = new Set ([2,3,4,5,2,7])
+       for (let elem of conjunto){
+        console.log (elem); //Vemos que no devuelve el 2 repetido 
+       }
+       console.log(conjunto.has(4))
+
+       //Con Spread se convierte a un array
+       const miArray = [...conjunto]
+</script>
+</body>
+</html>
