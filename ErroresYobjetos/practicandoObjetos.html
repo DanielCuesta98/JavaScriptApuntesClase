@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1-Definir y crear un objeto simple utilizando un literal
+            let persona1 = {
+                nombre: "Dani",
+                apellido: "Cuesta",
+                anio: 1998
+            };
+            console.log(persona1);
+        //2- Definir y crear un objeto simple utilizando la palabra New
+            let persona2 = new Object();
+            persona2.nombre = "Jorge";
+            persona2.apellido = "Garcia";
+            persona2.anio = 2001;
+            console.log(persona2);
+        //3- Definir un constructor de un objeto, y crear objetos del tipo construido
+            function Persona(nom, ape, an){
+                this.nombre = nom;
+                this.apellido = ape;
+                this.anio = an;
+                this.nombreCompleto = function nombreCompleto(){return this.nombre + " " + this.apellido}; //Funcion nombre completo
+            }
+            persona3 = new Persona(persona2.nombre, persona2.apellido, persona2.anio);
+            console.log(persona3);
+            persona4 = new Persona (persona1.nombre, persona1.apellido, persona1.anio);
+            console.log(persona4);
+
+            for(let a in persona2){ //Recorrer objetos con for in
+                let propiedad = persona2[a];//Me devuelve la propiedad que corresponda del objeto
+                console.log(a.toUpperCase() + " : " + propiedad);
+            }
+
+            console.log(persona3.nombre);
+            //console.log(persona3[nombre]);
+            console.log(persona3.apellido);
+            console.log(persona3.nombreCompleto());
+    </script>
+</body>
+</html>

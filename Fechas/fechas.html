@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //FECHAS, OBJETO DATE
+        let fechaActual = new Date();
+        console.log(fechaActual); //Muestra la fecha actual
+
+        //PROBANDO
+        let fecha1 = new Date("Wed Mar 25 2015 09:15 GMT +0100");
+        let fecha2 = new Date("October 12 2023");
+        let fecha3 = new Date("2023-05-27");
+        let fecha4 = new Date("2023"); //Solo con el año coge el 1 de enero
+
+        console.log("PROBANDO MANERAS DE DECLARAR FECHAS");
+        console.log("Fecha1: " + fecha1); //Muestra la fecha
+        console.log("Fecha2: " + fecha2);
+        console.log("Fecha3: " + fecha3);
+        console.log("Fecha4: " + fecha4);
+
+        let fechaLargo = new Date(2015, 11, 10, 14, 30, 25);
+        let fechaCorto = new Date(2015, 11, 10);
+        console.log("Fecha largo = " + fechaLargo + "\nFecha corto = " + fechaCorto);
+
+        //Otra forma de visualizar fechas
+        let fecha = new Date();
+        console.log("OTRA FORMA DE VER FECHAS")
+        console.log("Fecha: " + fecha)
+        console.log("toString: " + fecha.toString())
+        console.log("toUTCString: " + fecha.toUTCString());
+        console.log("toDateString: " + fecha.toDateString());//Forma más legible
+
+        //METODOS TIPO GET
+        fecha.getDate();
+        fecha.getDay();
+        fecha.getMonth();
+        fecha.getFullYear();
+        fecha.getHours();
+        fecha.getMinutes();
+        fecha.getSeconds();
+
+        //EJERCICIO: CALCULAR LOS DÍAS QUE HAN PASADO ENTRE HOY Y EL 7 DE MAYO DE 1950
+        let fechaHoy = new Date();
+        let fechaAntigua = new Date("1990-05-07 00:00:00");
+
+        console.log("DIAS QUE HAN PASADO ENTRE HOY Y EL 7 DE MAYO DE 1950");
+        let milis = fechaHoy.getTime() - fechaAntigua.getTime();
+        let days = milis 
+        console.log("dias: " + dias);
+
+        // Calcula los valores de años, meses, días, horas, minutos y segundos
+
+        console.log("DÍAS QUE HAN PASADO ENTRE HOY Y EL 7 DE MAYO DE 1990");
+        let diferenciaMilisegundos = fechaHoy - fechaAntigua;
+
+        let anios = fechaHoy.getFullYear() - fechaAntigua.getFullYear();
+        let meses = fechaHoy.getMonth() - fechaAntigua.getMonth();
+        let dias = fechaHoy.getDate() - fechaAntigua.getDate();
+        let horas = fechaHoy.getHours() - fechaAntigua.getHours();
+        let minutos = fechaHoy.getMinutes() - fechaAntigua.getMinutes();
+        let segundos = fecha.getSeconds() - fechaAntigua.getSeconds();
+
+       
+
+        console.log("ARRAY BIDIMENSIONAL");
+        let array = [
+            {
+                años: anios,
+                meses: meses,
+                dias: dias
+            },
+            {
+                horas: horas,
+                minutos: minutos,
+                segundos: segundos
+            }
+        ];
+        console.log(array);
+
+    </script>
+</body>
+
+</html>

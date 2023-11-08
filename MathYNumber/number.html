@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //NUMBER
+        let miNumero = 27;
+        alert (miNumero.toString(2)); //Binario
+
+        //Infinto y -Infinito
+        var inf = 2;
+        /*
+        while (inf != Infinity){//Cuando considera infinito se sale del bucle
+            alert (inf);
+            inf *= inf; //Probando infinito
+        }
+        */ 
+
+        //JavaScript entiende el infinito, al hacer un typeof vemos que lo considera Number
+        var div1 = 2, div2 = 0;
+        alert (2/0 + " " + typeof(div1/div2));
+
+        //ISNAN
+        //Interesante para saber si algo es o no es un numero
+        let variable1 = 100/"casa";
+        let variable2 = 100/"10";
+
+        alert (variable1 + " ¿Es un numero? " + isNaN(variable1)) //true, no es un numero
+        alert (variable2 + " ¿Es un numero? " + isNaN(variable2))//false, si es un numero
+
+        //Objeto Number
+        var num1 = 123
+        var num2 = new Number(123)
+        var num3 = new Number(123)
+
+        alert ("num1 es: "+ typeof(num1))
+        alert ("num2 es: "+ typeof(num2))
+
+        alert("num1 == num2: " + (num1 == num2))//true
+        alert("num1 === num2: " + (num1 === num2)) //false
+        alert("num2 == num3: " + (num2 === num3))//False, no son iguales ya que no tienen la misma referencia de objeto
+
+        //PROPIEDADES 
+        var maximo = Number.MAX_VALUE; alert("maximo = "+ maximo);
+        var minimo = Number.MIN_VALUE; alert("minimo = "+ minimo);
+        var negInf = Number.NEGATIVE_INFINITY; alert("negInf = "+ negInf);
+        var posInf = Number.POSITIVE_INFINITY; alert("posInf = "+ posInf);
+        var numNan = Number.NaN; alert("numNan = "+ numNan);
+        
+        /*
+        //MÉTODOS NUMBER
+        
+        toFixed(<num decimales>) => Cadena con X decimales
+        toPrecision(<num cifras>) => Cadea con X cifras
+        toExponential() => cadena con el numero redondeado a notacion cientifica
+        valueOf() => Devuelve el valor primitivo de un objeto
+        toString() => Devuelve la cadena de un numero
+        toLocateString(); => Devuelve el numero convertido a formato local
+        */
+
+        /*
+        // MÉTODOS GLOBALES
+
+        Number() => Devuelve valor numerico de una variable
+        parseInt() => Devuelve valor nuerico
+        parseFloat()
+        */
+
+        /*
+        OTRAS FUNCIONES
+        isNan(valor) => Dice si es numero
+        isFinite(valor) => Devuelve true si es finito (!= Infinity)
+        parseInt(valor) => 
+        parseFloat(valor) =>
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         Act 14 Escribe una función que reciba dos decimales con la base y altura de un rectángulo y devuelva su perímetro. 
+         La función no debe leer nada de la entrada estándar ni mandar ningún dato por la salida estándar.
+        Nota: se devolverá un decimal (float). La función debe definirse con este estilo:
+        funtion perimetroTriangulo(a,b){}
+        */
+
+        function perimetroTriangulo (a,b){
+            if (!parseFloat(a).toString().includes(".") || !parseFloat(b).toString().includes(".")){
+                return ("No me das un decimal");
+            }
+            else{
+                
+                a = parseFloat(a);//Convierte a float los numeros dados
+                b = parseFloat(b);
+                return (2 * (a + b)).toFixed(2); //Redondea a dos decimales
+            }     
+        }
+        alert (perimetroTriangulo(4.5,8.34))
+    </script>
+</body>
+</html>

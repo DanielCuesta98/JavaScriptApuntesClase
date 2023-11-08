@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Persona(nom,ape,ed) { //CONSTRUCTOR
+            this.nombre = nom;
+            this.apellido = ape;
+            this.edad = ed;
+            this.nombreCompleto = function(){
+                return this.nombre + " " + this.apellido
+            };
+        }
+
+        let pers = new Persona("Dani", "Cuesta", "25");
+        console.log(pers);
+
+        console.log("El nombre es: " + pers.nombre);
+        console.log("El apellido es: " + pers.apellido);
+        console.log("La edad es: " + pers.edad);
+        
+        //Construccion de objeto utilizand literal
+        let nombreObjeto = {
+            nombre: "Daniel",
+            apellido: "Cuesta",
+            edad: 25
+        };
+
+        //Propiedades
+        let paco = new Persona ("Paco", "Martinez", "27");
+        paco.nacionalidad = "Española"; //Añadiendo propiedad
+        console.log(paco.nacionalidad); //Añade una propiedad a un objeto en concreto, no al constructor
+
+        Persona.prototype.fecha = "1995"; //Añade una nueve propiedad a todos los objetos
+        console.log(pers.fecha);
+        console.log(paco.fecha); //Todos los objetos cogen esta propiedad
+        
+    </script>
+</body>
+</html>
